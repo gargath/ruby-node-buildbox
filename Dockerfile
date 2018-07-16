@@ -1,4 +1,5 @@
-FROM alpine:latest
+FROM ubuntu:latest
 
-RUN apk --no-cache add bash jq git openssh sudo python2 ruby npm \
+RUN apt-get update \
+ && apt-get install -y jq git openssh-client sudo python2.7 python-pip ruby npm \
  && gem install --no-ri --no-rdoc bundler
