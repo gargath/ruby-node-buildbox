@@ -8,8 +8,8 @@ RUN apt-get update \
  && dpkg -i google-chrome*.deb \
  && gem install --no-ri --no-rdoc bundler \
  && gem install --no-ri --no-rdoc rake
-RUN npm install -g ember-cli@2.12.1 \
- && npm install -g bower
+RUN npm install -g jest \
+ && npm install -g parcel
 COPY Gemfile /Gemfile
 ENV BUNDLE_CACHE_PATH=/gemcache
 RUN bundle package --all --all-platforms \
